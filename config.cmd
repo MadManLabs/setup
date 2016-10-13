@@ -11,6 +11,7 @@ doskey .. = pushd ..
 doskey cd = pushd $* $T dir
 doskey back = popd 
 doskey ls = dir
+doskey la = dir
 doskey d = cd %HOMEDRIVE%%HOMEPATH%\DESKTOP
 doskey exp = explorer.exe .
 doskey node = node $*
