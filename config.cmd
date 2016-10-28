@@ -15,3 +15,4 @@ doskey la = dir
 doskey d = cd %HOMEDRIVE%%HOMEPATH%\DESKTOP
 doskey exp = explorer.exe .
 doskey node = node $*
+doskey vim = bash -c "vim $*"
