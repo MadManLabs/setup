@@ -13,3 +13,4 @@ copy config.cmd %HOMEDRIVE%\config.cmd
 
 echo Done!
 pause
+popd
