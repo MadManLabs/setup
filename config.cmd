@@ -10,7 +10,7 @@ color %hexcolors%
 title %hexcolors%
 set PROMPT=$P$_$G$S
 
-set DIRCMD=/W
+set DIRCMD=
 
 doskey reload = %HOMEDRIVE%\config.cmd
 doskey start = start %HOMEDRIVE%\config.cmd
@@ -20,8 +20,8 @@ doskey . = pushd ..
 doskey .. = pushd ..
 doskey cd = pushd $* $T dir
 doskey back = popd 
-doskey ls = dir
-doskey la = dir
+doskey ls = dir /W $*
+doskey la = dir /A $*
 doskey d = cd %HOMEDRIVE%%HOMEPATH%\DESKTOP
 doskey exp = explorer.exe .
 

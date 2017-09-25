@@ -10,6 +10,7 @@ if %ERRORLEVEL% == 1 (
 )
 
 copy config.cmd %HOMEDRIVE%\config.cmd
+bash -c "cp .vimrc ~/"
 
 echo Done!
 pause
