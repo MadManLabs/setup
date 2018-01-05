@@ -7,7 +7,7 @@ set HEX=234578BCDEF
 set HEX2=0F
 call set hexcolors=%%HEX:~%rand1%,1%%%%HEX2:~%rand2%,1%%
 color %hexcolors%
-title %hexcolors%
+title %hexcolors% - %CD%
 set PROMPT=$P$_$G$S
 
 set DIRCMD=
@@ -16,13 +16,13 @@ doskey reload = %HOMEDRIVE%\config.cmd
 doskey start = start %HOMEDRIVE%\config.cmd
 
 doskey np = notepad++ $*
-doskey . = pushd ..
-doskey .. = pushd ..
-doskey cd = pushd $* $T dir
-doskey back = popd 
+doskey . = echo off $T pushd .. $T title %%CD%% $T echo on
+doskey .. = echo off $T pushd .. $T title %%CD%% $T echo on
+doskey cd = echo off $T pushd $* $T dir $T title %%CD%% $T echo on
+doskey back = echo off $T popd $T title %%CD%% $T echo on
 doskey ls = dir /W $*
 doskey la = dir /A $*
-doskey d = cd %HOMEDRIVE%%HOMEPATH%\DESKTOP
+doskey d = echo off $T pushd %HOMEDRIVE%%HOMEPATH%\DESKTOP $T title %%CD%% $T echo on
 doskey exp = explorer.exe .
 
 :: Needs bash on win10 enabled
