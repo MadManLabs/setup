@@ -1,13 +1,13 @@
 :: Hans Strausl's Personal config.cmd to run when opening cmd.exe
 @echo off
 
-set /a rand1=%random% %% 11
-set /a rand2=%random% %% 2
-set HEX=234578BCDEF
-set HEX2=0F
-call set hexcolors=%%HEX:~%rand1%,1%%%%HEX2:~%rand2%,1%%
-color %hexcolors%
-title %hexcolors% - %CD%
+::set /a rand1=%random% %% 11
+::set /a rand2=%random% %% 2
+::set HEX=234578BCDEF
+::set HEX2=0F
+::call set hexcolors=%%HEX:~%rand1%,1%%%%HEX2:~%rand2%,1%%
+::color %hexcolors%
+title %CD%
 set PROMPT=$P$_$G$S
 
 set DIRCMD=
